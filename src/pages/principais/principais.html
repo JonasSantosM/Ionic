@@ -1,0 +1,63 @@
+<ion-header>
+
+  <ion-toolbar color="Independence">
+    <ion-title>Principais</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal" (click)="Cadastro()" >
+        <ion-icon name="person-add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding class="Content">
+
+  <ion-list style="display:inline">
+
+      <ion-item>
+        <ion-input item-start  type="" class="Searchbox"></ion-input>
+        <button item-end ion-button icon-only padding="true" style="padding: 1vw;" class="Search-Button">
+
+          <ion-icon name="search"></ion-icon>
+
+        </button>
+      </ion-item>
+
+  </ion-list>
+
+  <ion-list>
+
+    <ion-item *ngFor="let  of ">
+
+      <p></p>
+
+      <button ion-button (click)="Perfil()">Editar</button>
+      <button ion-button>Excluir</button>
+
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list insert>
+
+    <ion-item *ngFor="let P of Post" class="Content">
+
+      <ion-card class="Posts">
+
+        <ion-card-header>
+          {{P.title}}
+        </ion-card-header>
+
+        <ion-card-content>
+          {{P.body}}
+        </ion-card-content>
+
+      </ion-card>
+
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
